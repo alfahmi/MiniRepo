@@ -1,9 +1,0 @@
-#define DISKNAME  Saluzie Debian 7.5 Repository - zie.xda@gmail.com (17-01-2015) 
-#define TYPE  binary
-#define TYPEbinary  CD1
-#define ARCH  amd64
-#define ARCHamd64  CD1
-#define DISKNUM  CD1
-#define DISKNUMCD1  CD1
-#define TOTALNUM  CD1
-#define TOTALNUMCD1  CD1
