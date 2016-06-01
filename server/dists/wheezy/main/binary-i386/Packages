@@ -1,0 +1,945 @@
+Package: apache2.2-common
+Priority: optional
+Section: httpd
+Installed-Size: 783
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: i386
+Source: apache2
+Version: 2.2.22-13+deb7u1
+Replaces: apache2-common
+Depends: apache2.2-bin (= 2.2.22-13+deb7u1), apache2-utils, mime-support, lsb-base, procps, perl
+Recommends: ssl-cert
+Suggests: www-browser, apache2-doc, apache2-suexec | apache2-suexec-custom
+Conflicts: apache, apache2-common
+Filename: saluzieos/apache2.2-common_2.2.22-13+deb7u1_i386.deb
+Size: 291066
+MD5sum: 8cd9ea2bfd868b1ed6310bafd44e2831
+SHA1: 7a4738068c0fb42c107932e22bd3f7d65141d3ab
+SHA256: e4a52d4112eca59ea1bb5975689fd14544026c3ffd70f22a0fb61981f63e2017
+SHA512: c9f92ce01e9892dfe17058b5eb6f2910ef0fafc64a1e24454a8edf329c3fe2ee9f366c15e2468b1bbc7c3202cd6f1548a9c328c95a82760868334cf2ab81617c
+Description: Apache HTTP Server common files
+ The Apache Software Foundation's goal is to build a secure, efficient and
+ extensible HTTP server as standards-compliant open source software. The
+ result has long been the number one web server on the Internet.
+ .
+ This package contains the configuration and support scripts.
+ However, it does *not* include the server itself; for this you need to
+ install one of the apache2-mpm-* packages, such as worker or prefork.
+Homepage: http://httpd.apache.org/
+
+Package: libapache2-mod-php5
+Priority: optional
+Section: httpd
+Installed-Size: 8139
+Maintainer: Debian PHP Maintainers <pkg-php-maint@lists.alioth.debian.org>
+Architecture: i386
+Source: php5
+Version: 5.4.4-14+deb7u9
+Provides: phpapi-20100525+lfs
+Depends: libbz2-1.0, libc6 (>= 2.11), libcomerr2 (>= 1.01), libdb5.1, libgssapi-krb5-2 (>= 1.6.dfsg.2), libk5crypto3 (>= 1.6.dfsg.2), libkrb5-3 (>= 1.6.dfsg.2), libonig2 (>= 5.2.0), libpcre3 (>= 8.10), libqdbm14 (>= 1.8.74), libssl1.0.0 (>= 1.0.0), libstdc++6 (>= 4.1.1), libxml2 (>= 2.8.0), zlib1g (>= 1:1.1.4), mime-support, apache2-mpm-prefork (>> 2.0.52) | apache2-mpm-itk, apache2.2-common, php5-common (= 5.4.4-14+deb7u9), libmagic1, ucf, tzdata
+Recommends: php5-cli
+Suggests: php-pear
+Conflicts: libapache2-mod-php4, libapache2-mod-php5filter
+Filename: saluzieos/libapache2-mod-php5_5.4.4-14+deb7u9_i386.deb
+Size: 2627098
+MD5sum: 0d924cf64e78a73cf3ee5c88b46bec7c
+SHA1: 252fd1338f2b276a89e872efa654076cade47d94
+SHA256: a71eac7d8bb91f7d2fca72be8ab5e17ccc57dc63aab93e3bcd2d58a245d6a6d7
+SHA512: 3d30a6d7360dc005d1645dcb665038ea59d92fbb364bb7c44718a3fdc126afa17b7b6a9c21cf45d1f0535b72556002c3109130e7db944e3e50f687d8ec3e2a3a
+Description: server-side, HTML-embedded scripting language (Apache 2 module)
+ This package provides the PHP5 module for the Apache 2 webserver (as
+ found in the apache2-mpm-prefork package).  Please note that this package
+ ONLY works with Apache's prefork MPM, as it is not compiled thread-safe.
+ The following extensions are built in: bcmath bz2 calendar Core ctype date
+ dba dom ereg exif fileinfo filter ftp gettext hash iconv json libxml
+ mbstring mhash openssl pcre Phar posix Reflection session shmop SimpleXML
+ soap sockets SPL standard sysvmsg sysvsem sysvshm tokenizer wddx xml
+ xmlreader xmlwriter zip zlib.
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Homepage: http://www.php.net/
+
+Package: courier-base
+Priority: optional
+Section: mail
+Installed-Size: 507
+Maintainer: Stefan Hornburg (Racke) <racke@linuxia.de>
+Architecture: i386
+Source: courier
+Version: 0.68.2-1
+Replaces: courier-debug (<< 0.44.2)
+Depends: debconf (>= 0.5.00) | debconf-2.0, libc6 (>= 2.7), libfam0, libgdbm3 (>= 1.8.3), perl, courier-authlib (>= 0.63.0), courier-authlib-userdb, courier-authdaemon, lsb-base (>= 3.1-23)
+Conflicts: courier-debug (<< 0.44.2), courier-imap (<= 1.3.3), sqwebmail (<< 0.45.6)
+Filename: saluzieos/courier-base_0.68.2-1_i386.deb
+Size: 269892
+MD5sum: 6a9fca0aab89f4af152cf7d427726cb5
+SHA1: ef87e7680296146d4af1744a31b85c96137a2194
+SHA256: 00a758f20421ca1d87126bb5bc8dc93653a4c9aa463b1a6855aed302104f0772
+SHA512: f27182acbff3f1efa433b3fcb840fdc714745d73291089a3b727a4245cad8bc011ca61c382b5bad62059be53734fcf51c0a52beff8963b479e59babb3e1629ad
+Description: Courier mail server - base system
+ The Courier mail transfer agent (MTA) is an integrated mail/groupware
+ server based on open commodity protocols, such as ESMTP, IMAP, POP3, LDAP,
+ SSL, and HTTP. Courier provides ESMTP, IMAP, POP3, webmail, and mailing list
+ services within a single, consistent, framework.
+ .
+ This package provides the functionality needed by all courier packages
+ such as some configuration files, helper programs and the Courier TCP server
+ daemon.
+Homepage: http://www.courier-mta.org/
+
+Package: bind9utils
+Priority: optional
+Section: net
+Installed-Size: 292
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: i386
+Source: bind9
+Version: 1:9.8.4.dfsg.P1-6+nmu2+deb7u1
+Replaces: bind9 (<= 1:9.5.0~b2-1)
+Depends: libbind9-80, libc6 (>= 2.4), libcap2 (>= 2.10), libdns88, libgssapi-krb5-2 (>= 1.6.dfsg.2), libisc84, libisccc80, libisccfg82, libssl1.0.0 (>= 1.0.0), libxml2 (>= 2.6.27)
+Filename: saluzieos/bind9utils_1%3a9.8.4.dfsg.P1-6+nmu2+deb7u1_i386.deb
+Size: 120642
+MD5sum: b66e66d797524eb971f612bac63000db
+SHA1: 0befbe115477109c3f3af43fb38a2ba7a7d35ac4
+SHA256: 3d52791d32aa60be5d1f954d85ebc7c58b2a8ec4b48478f76cb4f4cbca2ebf62
+SHA512: e35dab77310e7fe25219c58ce7d1c0db7b62362c53fcc8e3095a9219148c7b787a3818c5ef5acf54e3aa4685950c0274d3d573bc3221238a7d6ba18daea79a8e
+Description: Utilities for BIND
+ This package provides various utilities that are useful for maintaining a
+ working BIND installation.
+
+Package: courier-authdaemon
+Priority: optional
+Section: mail
+Installed-Size: 60
+Maintainer: Stefan Hornburg (Racke) <racke@linuxia.de>
+Architecture: i386
+Source: courier-authlib (0.63.0-6)
+Version: 0.63.0-6+b1
+Depends: courier-authlib (>= 0.63.0), lsb-base (>= 3.0-10)
+Filename: saluzieos/courier-authdaemon_0.63.0-6+b1_i386.deb
+Size: 8804
+MD5sum: 98f68e3489c3bbe07320ccb789933602
+SHA1: 19d3365973a24382c6c67a841d2bbf9826a03dbb
+SHA256: 11ddd72f70a28132332ed667a5f9f9e90a9644bfb6de23153a40b5a23e60b701
+SHA512: bd599c63d10f776100ebf3f83a8faf6ecf806e039ca93e5b959eefb3d2f1d1b91eebd0dddc15f1e6b054860d53580aef43ca9b18618f827b5722de4462f115de
+Description: Courier authentication daemon
+ This package contains the authentication daemon for the Courier applications.
+
+Package: php5-common
+Priority: optional
+Section: php
+Installed-Size: 870
+Maintainer: Debian PHP Maintainers <pkg-php-maint@lists.alioth.debian.org>
+Architecture: i386
+Source: php5
+Version: 5.4.4-14+deb7u9
+Provides: php5-json, php5-mhash
+Depends: sed (>= 4.1.1-1), psmisc (>= 22.15-1~), libc6 (>= 2.4), ucf
+Pre-Depends: dpkg (>= 1.15.7.2~)
+Conflicts: php5-json, php5-mhash
+Breaks: boinc-server-maker (<= 7.0.14+dfsg-1), d-push (<= 1.5.5-1), dotclear (<= 2.4.0+dfsg-1), fossology-common (<= 1.2.0-3.1), gforge-common (<= 5.1.1-2), horde3 (<= 3.3.12+debian0-1), jffnms (<= 0.9.1-1), libow-php5 (<= 2.8p14-3), lwat (<= 0.17-4.2), moodle (<= 1.9.9.dfsg2-4), php-imlib (<= 0.7-3), php-kolab-filter (<= 0.1.9-4), php-openid (<= 2.2.2-1), php-radius-legacy (<= 1.2.5-2.1), php5-gpib (<= 3.2.11-2.1), php5-suhosin (<< 0.9.34), phpreports (<= 0.4.9-2), zoph (<= 0.8.0.1-1)
+Filename: saluzieos/php5-common_5.4.4-14+deb7u9_i386.deb
+Size: 589376
+MD5sum: 1c69f44dad1fd8e940da5d6e026f6cb5
+SHA1: daec92f8e72f3b0292332d636e5916cb8be053d2
+SHA256: d094aff3874eae46cd2bd4e170587c7c0407ab995d4cb72afc1b4e8a28001b3e
+SHA512: d28097b8ef8e2830bace51f44d4baac7609b38266745fb0d9993d9979264fcc74dcd0c5f54dc7faacb0409d30b188c0ca84094c7b677623cd6e9299fc7f8b8b4
+Description: Common files for packages built from the php5 source
+ This package contains the documentation and example files relevant to all
+ the other packages built from the php5 source.
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Homepage: http://www.php.net/
+
+Package: apache2-mpm-prefork
+Priority: optional
+Section: httpd
+Installed-Size: 55
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: i386
+Source: apache2
+Version: 2.2.22-13+deb7u1
+Provides: apache2, apache2-mpm, httpd, httpd-cgi
+Depends: apache2.2-common (= 2.2.22-13+deb7u1), apache2.2-bin (= 2.2.22-13+deb7u1)
+Conflicts: apache2-common, apache2-mpm
+Filename: saluzieos/apache2-mpm-prefork_2.2.22-13+deb7u1_i386.deb
+Size: 2344
+MD5sum: 63a88f6ad9235511464fd2dfdf349d8e
+SHA1: ded7900746be8b3259bd36c80f42549642d08974
+SHA256: 4072609b4d577e4e5b2402b98e2da664578aec27f150d91a33f0071ced970bb9
+SHA512: cdf535acde17512e13fc4ccc056dc49b0e8ce586dab09ec989ef418880c08a0ff371770a7157afa57d46a8cc8adf3bf42ffe22ce7b4b245b041f4ad57568b87e
+Description: Apache HTTP Server - traditional non-threaded model
+ Each Apache Multi-Processing Module provides a different "flavor" of
+ web server binary, compiled with a different processing model.
+ .
+ The prefork MPM provides a non-threaded implementation using a variable
+ number of processes where each process handles only one connection
+ at the same time. It is not as fast as threaded models, but is considered to
+ be more stable. It is appropriate for sites that need to maintain
+ compatibility with non-thread-safe libraries, and is the best MPM for
+ isolating each request, so that a problem with a single request will not
+ affect any other.
+Homepage: http://httpd.apache.org/
+
+Package: libfam0
+Priority: optional
+Section: libs
+Installed-Size: 108
+Maintainer: Chuan-kai Lin <cklin@debian.org>
+Architecture: i386
+Source: fam
+Version: 2.7.0-17
+Replaces: libfam0c102 (<< 2.7.0-17)
+Provides: libfam0c102
+Depends: libc6 (>= 2.1.3), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1)
+Suggests: fam (= 2.7.0-17)
+Filename: saluzieos/libfam0_2.7.0-17_i386.deb
+Size: 28920
+MD5sum: 529c208133a07b1d97bfdbf475d33d45
+SHA1: 888e14dfa02a21b5ed594377c2298f0dbfef60b8
+SHA256: 2c4c72d0be5f93c0dc5c4bc31a073b6812f4bc8526b2e1c11d711410f567398b
+SHA512: 135c8bf19de9c15beedc6161bb7234c5f04d571abd04ea3a0c45e087499e373a3f12d302d2319a910eace3773b8ab4c3f167b8a9c24d22b1d2664cc538c14039
+Description: Client library to control the FAM daemon
+ FAM monitors files and directories, notifying interested applications
+ of changes.
+ .
+ This package provides a shared library to allow programs to connect to
+ the FAM daemon and ask for files to be monitored.
+Homepage: http://oss.sgi.com/projects/fam/
+
+Package: libqdbm14
+Priority: optional
+Section: libs
+Installed-Size: 356
+Maintainer: KURASHIKI Satoru <lurdan@gmail.com>
+Architecture: i386
+Source: qdbm
+Version: 1.8.78-2
+Depends: libc6 (>= 2.3.6-6~), zlib1g (>= 1:1.1.4)
+Filename: saluzieos/libqdbm14_1.8.78-2_i386.deb
+Size: 150904
+MD5sum: 668898a862feb962472e2aa5fe76da01
+SHA1: 332c12cb462294193f943809dc7256f41a305c3a
+SHA256: 7fe43c96cbc0f11cd1b9163cfd69149093c02ae6fc25dbf92860795c7201534e
+SHA512: 9f7ebe9e0c2b9394fc18fa016e02ad7cbe33475ed81ac8979698569981c4124c834d2b0f698ccc6fbcc27b58829aee01ce93a26ee4816da0b1997ecf68cbdf02
+Description: QDBM Database Libraries without GDBM wrapper[runtime]
+ QDBM is an embeded database library compatible with GDBM and NDBM.
+ It features hash database and B+ tree database and is developed referring
+ to GDBM for the purpose of the following three points: higher processing
+ speed, smaller size of a database file, and simpler API.
+ This is the runtime package for programs that use the QDBM database
+ library.
+Homepage: http://fallabs.com/qdbm/
+
+Package: notification-daemon
+Priority: optional
+Section: x11
+Installed-Size: 168
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Version: 0.7.6-1
+Replaces: notify-daemon
+Depends: libatk1.0-0 (>= 1.12.4), libc6 (>= 2.2.5), libcairo2 (>= 1.10.0), libcanberra-gtk3-0 (>= 0.25), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.27.0), libgtk-3-0 (>= 3.0.0), libx11-6
+Conflicts: notify-daemon
+Filename: saluzieos/notification-daemon_0.7.6-1_amd64.deb
+Size: 30914
+MD5sum: 5cd58924cc9c12ccdc6f5e0d8ea73188
+SHA1: 70d38269c905011ee3adff392827350fa39102eb
+SHA256: 259ae316f2d20ac5dacd32482ceb21cd882149342c9036032125d9d009e9f136
+SHA512: d8001f13d92b7072b715a13954dbc1be87f44e3356490351f5b6e173ab5c02e06ba9e1c3de6702527a67e8caf163f08063d408ffe33bc0065728f552e2bb7433
+Description: daemon for displaying passive pop-up notifications
+ notification-daemon displays passive pop-up notifications, as per
+ the Desktop Notifications Specification.
+ .
+ The Desktop Notifications Specification provides a standard way of
+ doing passive pop-up notifications on the Linux desktop. These are
+ designed to notify the user of something without interrupting their
+ work with a dialog box that they must close.  Passive popups can
+ automatically disappear after a short period of time.
+Homepage: http://www.galago-project.org/specs/notification/index.php
+
+Package: courier-authlib-userdb
+Priority: optional
+Section: mail
+Installed-Size: 107
+Maintainer: Stefan Hornburg (Racke) <racke@linuxia.de>
+Architecture: i386
+Source: courier-authlib (0.63.0-6)
+Version: 0.63.0-6+b1
+Depends: courier-authlib (>= 0.63.0), libc6 (>= 2.4), libgdbm3 (>= 1.8.3)
+Conflicts: courier-base (<< 0.48)
+Filename: saluzieos/courier-authlib-userdb_0.63.0-6+b1_i386.deb
+Size: 36480
+MD5sum: 8fd3694ece7d4b3b12b02ece2bc95d84
+SHA1: 29eb2ca5ffff160d410bd27d7b8a7ec5c4640ef6
+SHA256: a0db0b9de57ad5ae3d477174358e93ff9f6268a85d6907d801c9af1c6056272e
+SHA512: 0617e07edb2321ad52e9d0d3f380a7083df51b787f46f683aa17b0e6d60d4639d90103fb5b553c8baecbd47aec226464cb7fa21bc25995b608f9243901878269
+Description: userdb support for the Courier authentication library
+ This package contains the userdb support for the Courier authentication
+ library. Userdb is a simple way to manage virtual mail accounts using
+ a GDBM-based database file.
+
+Package: ssl-cert
+Priority: optional
+Section: utils
+Installed-Size: 101
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: all
+Version: 1.0.32
+Depends: debconf (>= 0.5) | debconf-2.0, openssl (>= 0.9.8g-9), adduser
+Suggests: openssl-blacklist
+Filename: saluzieos/ssl-cert_1.0.32_all.deb
+Size: 19456
+MD5sum: 399460073cdc8879080f12d53f296daa
+SHA1: cd693b7f166024b49869ca55ab4c08d13de07d8b
+SHA256: af7c5a111587beaaad390ff62efdacca92fb32fa2f5aac585cda8ac101b691fb
+SHA512: fc3f70b2410e3bba02c588c5603e6e01f703ebcffcf9af9b501275715e31781ebd0ae3e77234c412766d886817f0f85f002dd468f5a95d8702ec5c2ec0832e4e
+Description: simple debconf wrapper for OpenSSL
+ This package enables unattended installs of packages that
+ need to create SSL certificates.
+ .
+ It is a simple wrapper for OpenSSL's certificate request utility that
+ feeds it with the correct user variables.
+
+Package: update-inetd
+Priority: optional
+Section: admin
+Installed-Size: 101
+Maintainer: Serafeim Zanikolas <sez@debian.org>
+Architecture: all
+Version: 4.43
+Replaces: netbase (<< 4.27)
+Depends: debconf (>= 0.5) | debconf-2.0, libfile-temp-perl, libfile-copy-recursive-perl
+Breaks: netbase (<< 4.27)
+Filename: saluzieos/update-inetd_4.43_all.deb
+Size: 21760
+MD5sum: 2609248fac6590aada4735eda4fb1b9b
+SHA1: f058444df5a6d2c36dabb4ffca6005cc0ca6d798
+SHA256: 69954fa886ab62eb2fbca1add9e237a9b4e19d1c1e0b91b148f7dbf3695cf048
+SHA512: e65cbdf9007d5338e05e2f78a5a6e0ca99f97d982a41dd40412fd1c08654cb6b1a4f75dffbb589179a51ac50d0857216eb066eda1fe278a58d5495b8d37a5bb9
+Description: inetd configuration file updater
+ This package provides a program used by other packages to
+ automatically update /etc/inetd.conf, the configuration file shared
+ by all implementations of the Internet super-server.
+ .
+ Note that xinetd is not supported by this package.
+Multi-Arch: foreign
+
+Package: libapr1
+Priority: optional
+Section: libs
+Installed-Size: 262
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: i386
+Source: apr
+Version: 1.4.6-3+deb7u1
+Depends: libc6 (>= 2.10), libuuid1 (>= 2.16)
+Conflicts: libapr1.0
+Filename: saluzieos/libapr1_1.4.6-3+deb7u1_i386.deb
+Size: 111880
+MD5sum: 69622aaea27b8a32cefe124a6d56f8f8
+SHA1: 477d894c0e54aca92602515e5a5b6006528ce729
+SHA256: 86747169cddc3e91f862ca1deda8bdaa4d8699d787a12b92a73e94e762119eca
+SHA512: 38ff808b4b8b834bdec0fa81d1d1fde7eba8e3bbbfa7ca69729bcb17e2776547c58ffc3a8176cd57f7547f98bbe05015a9414ca8ad3bc3a2e1f2266c641e27cb
+Description: Apache Portable Runtime Library
+ APR is Apache's Portable Runtime Library, designed to be a support library
+ that provides a predictable and consistent interface to underlying
+ platform-specific implementations.
+Homepage: http://apr.apache.org/
+
+Package: tcl8.5
+Priority: optional
+Section: interpreters
+Installed-Size: 3651
+Maintainer: Tcl/Tk Debian Packagers <pkg-tcltk-devel@lists.alioth.debian.org>
+Architecture: i386
+Version: 8.5.11-2
+Provides: tclsh
+Depends: libc6 (>= 2.7)
+Suggests: tcl-tclreadline
+Conflicts: tcl74 (<= 7.4p3-2)
+Filename: saluzieos/tcl8.5_8.5.11-2_i386.deb
+Size: 1637008
+MD5sum: ab753535b29bb2300345f72d330bff11
+SHA1: da9b41b58a478356afb1d2583c4a36db384480fb
+SHA256: cefba0772996f663672154e726435118d0f43bb4a685ff0fc39a86f6164f0457
+SHA512: 17df35cf7d31070c2bc28ce29580a8fa58f35610c13af5c68d8c437de97a2be6ac6d631f7a11b6aa060bf08b69f80ea53c5d42f9c36ef045278c3b1fba913ad1
+Description: Tcl (the Tool Command Language) v8.5 - run-time files
+ Tcl is a powerful, easy to use, embeddable, cross-platform interpreted
+ scripting language.  This package contains everything you need to run
+ Tcl scripts and Tcl-enabled apps.  This version includes thread support.
+Homepage: http://www.tcl.tk/
+
+Package: postfix
+Priority: extra
+Section: mail
+Installed-Size: 3200
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: i386
+Version: 2.9.6-2
+Replaces: mail-transport-agent
+Provides: mail-transport-agent
+Depends: libc6 (>= 2.11), libdb5.1, libsasl2-2 (>= 2.1.24), libsqlite3-0 (>= 3.5.9), libssl1.0.0 (>= 1.0.0), debconf (>= 0.5) | debconf-2.0, netbase, adduser (>= 3.48), dpkg (>= 1.8.3), lsb-base (>= 3.0-6), ssl-cert, cpio
+Recommends: python
+Suggests: procmail, postfix-mysql, postfix-pgsql, postfix-ldap, postfix-pcre, sasl2-bin, libsasl2-modules, dovecot-common, resolvconf, postfix-cdb, mail-reader, ufw, postfix-doc
+Conflicts: libnss-db (<< 2.2-3), mail-transport-agent, smail
+Filename: saluzieos/postfix_2.9.6-2_i386.deb
+Size: 1546186
+MD5sum: 7daf5849819c1940bfa84e07d4b6145a
+SHA1: ba8b81c9aa93a10d92e752c8c84034a320eb7aeb
+SHA256: f3810c7b66c6650416a62278e27c5bf49429cda170a113e4802aaefb6fa46d3d
+SHA512: 8f9b03a649ea424663f87231852d757925d32664d2f6218662ae50193f5dae6e38b3aff88843b2a21ba4f11a47017ebccbb03de46967606cba1713bafd06a881
+Description: High-performance mail transport agent
+ Postfix is Wietse Venema's mail transport agent that started life as an
+ alternative to the widely-used Sendmail program.  Postfix attempts to
+ be fast, easy to administer, and secure, while at the same time being
+ sendmail compatible enough to not upset existing users. Thus, the outside
+ has a sendmail-ish flavor, but the inside is completely different.
+Homepage: http://www.postfix.org
+
+Package: libaprutil1-ldap
+Priority: optional
+Section: libs
+Installed-Size: 58
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: i386
+Source: apr-util
+Version: 1.4.1-3
+Depends: libaprutil1 (= 1.4.1-3), libc6 (>= 2.3.6-6~), libldap-2.4-2 (>= 2.4.7)
+Filename: saluzieos/libaprutil1-ldap_1.4.1-3_i386.deb
+Size: 16640
+MD5sum: a37e1a971a4719e76df589c560a83063
+SHA1: 802eca167ca221be28c5c3a5bca1eacae317bbc8
+SHA256: 7bdcdf78e57532851434ac8b7bffdcaceca82d0d8a26705952792d42ef22273e
+SHA512: 0201e6ca1b04f99c745baf9a416b9f6fd68929f5adeb197f4fd51de1b320dffce74650d0789981216cb6baae71cd63ff41d83a874991af89900acbc7ce4baddb
+Description: Apache Portable Runtime Utility Library - LDAP Driver
+ APR is Apache's Portable Runtime Library, designed to be a support library
+ that provides a predictable and consistent interface to underlying
+ platform-specific implementations.
+ .
+ APR Util is a utilities library implemented on top of apr, providing database
+ access, xml parsing, and other useful functionality.
+ .
+ This package contains the LDAP driver.
+Homepage: http://apr.apache.org/
+
+Package: apache2.2-bin
+Priority: optional
+Section: httpd
+Installed-Size: 3416
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: i386
+Source: apache2
+Version: 2.2.22-13+deb7u1
+Replaces: apache2.2-common (<< 2.2.14-2~)
+Depends: libapr1 (>= 1.4.2), libaprutil1 (>= 1.4.0), libaprutil1-dbd-sqlite3 | libaprutil1-dbd-mysql | libaprutil1-dbd-odbc | libaprutil1-dbd-pgsql | libaprutil1-dbd-freetds, libaprutil1-ldap, libc6 (>= 2.4), libcap2 (>= 2.10), libldap-2.4-2 (>= 2.4.7), libpcre3 (>= 8.10), libssl1.0.0 (>= 1.0.1), zlib1g (>= 1:1.1.4)
+Conflicts: apache2.2-common (<< 2.2.11-5~)
+Filename: saluzieos/apache2.2-bin_2.2.22-13+deb7u1_i386.deb
+Size: 772790
+MD5sum: f30b31bb516498dce9c1134b51834e22
+SHA1: 84fe0198baa064576169e6f34c79dde148691368
+SHA256: 1aabe51b0374e08ba6d42b74ad9c5a5e0bb79d06664abd7b5d1000819bdd20f9
+SHA512: dfb38ce07640e90b53bfbad8b46957d22b894f3fe2ab1dcb3a85e597910d28063753c46e820149b1b7c2eebf50a265d49a79bc90708b170ac3ec95ffb4b23fa3
+Description: Apache HTTP Server common binary files
+ The Apache Software Foundation's goal is to build a secure, efficient and
+ extensible HTTP server as standards-compliant open source software. The
+ result has long been the number one web server on the Internet.
+ .
+ This package contains all binaries but no configuration or support scripts.
+ To get a stand-alone server, you need to install one of the apache2-mpm-*
+ packages, such as worker or prefork. Other packages like gnome-user-share
+ may bring their own Apache configuration, though.
+Homepage: http://httpd.apache.org/
+
+Package: aptoncd-metapackage
+Priority: optional
+Section: base
+Maintainer: APTonCD Auto-Packager <http://aptoncd.sourceforge.net>
+Architecture: i386
+Version: 20150114
+Depends: apache2-mpm-prefork, apache2-utils, apache2.2-bin, apache2.2-common, apache2, bind9, bind9utils, courier-authdaemon, courier-authlib-userdb, courier-authlib, courier-base, courier-imap, courier-pop, expect, libapache2-mod-php5, libapr1, libaprutil1-dbd-sqlite3, libaprutil1-ldap, libaprutil1, libfam0, libfile-copy-recursive-perl, libltdl7, libonig2, libqdbm14, notification-daemon, php5-cli, php5-common, postfix, proftpd-basic, proftpd-mod-vroot, squirrelmail-locales, squirrelmail-viewashtml, squirrelmail, ssl-cert, tcl8.5, update-inetd
+Filename: saluzieos/aptoncd-metapackage_20150114.deb
+Size: 988
+MD5sum: db481112417434341ad7539fd8502592
+SHA1: c951913fde1ec21b852a14f61be46ee51da090fb
+SHA256: f2381c4e390b6bf1887d6ea4a00e89fdec3d3c3d37ce0d9706cebfbce8474927
+SHA512: 1ce1de17b9ac3140f84645ad939dac9f05d94dda96a9a5a83e5632c7feabfa685dc5090015ddfbf21fc6d33f31436ff1206df690d184ac06199068b4a7f6c076
+Description: auto-meta-package for APTonCD media packages
+  Auto-generated meta-package that contains as dependencies all
+  packages in APTonCD media, previously generated by APTonCD
+  .
+  To know more about APTonCD Auto-Packager, visit http://aptoncd.sourceforge.net
+
+Package: apache2-utils
+Priority: optional
+Section: httpd
+Installed-Size: 329
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: i386
+Source: apache2
+Version: 2.2.22-13+deb7u1
+Replaces: apache-utils (<< 1.3.33-4), apache2-common, apache2.2-bin (<< 2.2.22-1~)
+Depends: libapr1 (>= 1.2.7), libaprutil1 (>= 1.2.7+dfsg), libc6 (>= 2.4), libssl1.0.0 (>= 1.0.0)
+Conflicts: apache-common (<< 1.3.28.0.1-1)
+Filename: saluzieos/apache2-utils_2.2.22-13+deb7u1_i386.deb
+Size: 162484
+MD5sum: 0d328fc7f58c7cc6cd4f4c172d80ca66
+SHA1: b93e92b7f06382dba12da6b95803830b2db908b6
+SHA256: 9b1add1cdfaef391b1a8ad29509b772e04d040ce7e93229e10383bbdae030e73
+SHA512: 927404f8b5d4f04769b5a343499d7e09004bdaa8a6e7d1ebe0cc97fdff17d1fcea76a87953592188471da30801a10ecc1c9dc1f875c251fe90a6d7ad7d5c73bd
+Description: utility programs for webservers
+ Provides some add-on programs useful for any webserver.  These include:
+  - ab (Apache benchmark tool)
+  - logresolve (Resolve IP addresses to hostname in logfiles)
+  - htpasswd (Manipulate basic authentication files)
+  - htdigest (Manipulate digest authentication files)
+  - dbmmanage (Manipulate basic authentication files in DBM format, using perl)
+  - htdbm (Manipulate basic authentication files in DBM format, using APR)
+  - rotatelogs (Periodically stop writing to a logfile and open a new one)
+  - split-logfile (Split a single log including multiple vhosts)
+  - checkgid (Checks whether the caller can setgid to the specified group)
+  - check_forensic (Extract mod_log_forensic output from Apache log files)
+  - httxt2dbm (Generate dbm files for use with RewriteMap)
+Homepage: http://httpd.apache.org/
+
+Package: bind9
+Priority: optional
+Section: net
+Installed-Size: 936
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: i386
+Version: 1:9.8.4.dfsg.P1-6+nmu2+deb7u1
+Replaces: apparmor-profiles (<< 2.1+1075-0ubuntu4), bind, dnsutils (<< 1:9.1.0-3)
+Depends: libbind9-80 (= 1:9.8.4.dfsg.P1-6+nmu2+deb7u1), libc6 (>= 2.4), libcap2 (>= 2.10), libdns88 (= 1:9.8.4.dfsg.P1-6+nmu2+deb7u1), libgssapi-krb5-2 (>= 1.6.dfsg.2), libisc84 (= 1:9.8.4.dfsg.P1-6+nmu2+deb7u1), libisccc80 (= 1:9.8.4.dfsg.P1-6+nmu2+deb7u1), libisccfg82 (= 1:9.8.4.dfsg.P1-6+nmu2+deb7u1), liblwres80 (= 1:9.8.4.dfsg.P1-6+nmu2+deb7u1), libssl1.0.0 (>= 1.0.0), libxml2 (>= 2.7.4), debconf (>= 0.5) | debconf-2.0, netbase, adduser, lsb-base (>= 3.2-14), bind9utils (= 1:9.8.4.dfsg.P1-6+nmu2+deb7u1), net-tools
+Suggests: dnsutils, bind9-doc, resolvconf, ufw
+Conflicts: apparmor-profiles (<< 2.1+1075-0ubuntu4), bind
+Filename: saluzieos/bind9_1%3a9.8.4.dfsg.P1-6+nmu2+deb7u1_i386.deb
+Size: 369802
+MD5sum: 1662779ed53a17cb67623a3d1f8d51fa
+SHA1: 717cecb8ee0f97b5e439dc2c8878119ae1434af6
+SHA256: f812053d9578715ad4c52f739eb5762200a806855366747637c7605515327949
+SHA512: 607eb39cea257e4f9d3a5bd8d50b78f8bad5bac8364e2574ec80d32ca0ab4a36359a249e901b158e0f0011dd87b6d2c5706522a20419d39472c2319ce26241bc
+Description: Internet Domain Name Server
+ The Berkeley Internet Name Domain (BIND) implements an Internet domain
+ name server.  BIND is the most widely-used name server software on the
+ Internet, and is supported by the Internet Software Consortium, www.isc.org.
+ This package provides the server and related configuration files.
+
+Package: libfile-copy-recursive-perl
+Priority: optional
+Section: perl
+Installed-Size: 88
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Architecture: all
+Version: 0.38-1
+Depends: perl (>= 5.6.0-16)
+Filename: saluzieos/libfile-copy-recursive-perl_0.38-1_all.deb
+Size: 20554
+MD5sum: 6637082afadd2ce1536e0496da1c70ae
+SHA1: c0ac443726800384d9b2d97c3575f0338a5fed95
+SHA256: 022eb490b0fbf721fa321725e158a040949479c09c2f9c910c19589a1e57bc8f
+SHA512: d5967b463cb28f894c381d6a3a4f3e5bffca34865c6750d211718618215623ad1d82bc26b7a7a560585934f94cdedea3322deed02b8cbb7dfa261f58c846dc3e
+Description: Perl extension for recursively copying files and directories
+ File::Copy::Recursive module copies and moves directories recursively
+ (or single files, well... singley) to an optional depth and attempts
+ to preserve each file or directory's mode.
+Homepage: http://search.cpan.org/dist/File-Copy-Recursive/
+
+Package: courier-authlib
+Priority: optional
+Section: mail
+Installed-Size: 253
+Maintainer: Stefan Hornburg (Racke) <racke@linuxia.de>
+Architecture: i386
+Source: courier-authlib (0.63.0-6)
+Version: 0.63.0-6+b1
+Depends: libc6 (>= 2.4), libgdbm3 (>= 1.8.3), libltdl7 (>= 2.4.2), libpam0g (>= 0.99.7.1), expect
+Conflicts: courier-authdaemon (<< 0.58), courier-authmysql, courier-authpostgresql, courier-base (<< 0.48)
+Filename: saluzieos/courier-authlib_0.63.0-6+b1_i386.deb
+Size: 85040
+MD5sum: 4b54e7798579a4d200b09892a67fbb07
+SHA1: bf57d4a1e966fc0c6bbda436a7ee793681390924
+SHA256: 39bde2f8e1b1b438b6aa892972e7c472e8653f132f441ce8974c9c6b3d040648
+SHA512: 5e402751a7c2115d912731dce1c9c19002f043f3dd3f82fd3ac656f72d68db2a67032ea37f9cf377283a2f7134b4d454b7dfafa38f05b9683422e4ab6e0d4b6d
+Description: Courier authentication library
+ The Courier authentication library provides authentication services for
+ other Courier applications.
+
+Package: squirrelmail-locales
+Priority: optional
+Section: web
+Installed-Size: 11672
+Maintainer: Jeroen van Wolffelaar <jeroen@wolffelaar.nl>
+Architecture: all
+Version: 1.4.18-20090526-1
+Depends: squirrelmail, locales
+Filename: saluzieos/squirrelmail-locales_1.4.18-20090526-1_all.deb
+Size: 3244230
+MD5sum: ff65d8b9b074f86c201d20266dd6519d
+SHA1: 3bdcb3cb9db4442685a6b5c4ec905877bd8cd339
+SHA256: 9f29e564a6f0467788c3eb800ef49489e17f3f668b824ad010ba2bc26211c2b0
+SHA512: 913a3b286df9e41a59c53008d05d71b9b7fbbb27793750ea1cea9e2a5b0ed3e4919a91a6ad3450638097e63dd2e0319daf45734e028e293664b0f77542ed9e83
+Description: Translations for the SquirrelMail Webmail package
+ This package contains translations for the SquirrelMail webmail client,
+ needed when you want your users to be able to select an interface
+ language other than English.
+Homepage: http://www.squirrelmail.org/
+
+Package: squirrelmail-viewashtml
+Priority: optional
+Section: web
+Installed-Size: 32
+Maintainer: Jan Hauke Rahm <jhr@debian.org>
+Architecture: all
+Version: 3.8-3
+Depends: squirrelmail (>= 2:1.4.10)
+Conflicts: squirrelmail (>= 2:1.5)
+Filename: saluzieos/squirrelmail-viewashtml_3.8-3_all.deb
+Size: 6358
+MD5sum: 31ec7970f14452cc088e4b3a28f4d9a7
+SHA1: 724c8d89e731a0784aaee86a0301301da125a313
+SHA256: ef43a68ba67e3bce52110d1d67770869c9bbd44dd24f4443533dc3c3237ecab0
+SHA512: 0ff7013cee3573a4b059140e1b272580f82bdd7c433bc7889e2288246d185dfe86faaa0bb5fa3b35ffbf385b51a84a95e7350b3dda779f84140c76ea1f516d46
+Description: SquirrelMail plugin: View mails as HTML
+ Adds a link to each email allowing the user to switch between HTML and plain
+ text.
+ .
+ SquirrelMail is a standards-based webmail package written in PHP. It runs on
+ top of any IMAP server.
+Enhances: squirrelmail
+Homepage: http://www.squirrelmail.org/plugin_view.php?id=55
+
+Package: libaprutil1
+Priority: optional
+Section: libs
+Installed-Size: 234
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: i386
+Source: apr-util
+Version: 1.4.1-3
+Depends: libapr1 (>= 1.3.2), libc6 (>= 2.4), libdb5.1, libexpat1 (>= 2.0.1), libssl1.0.0 (>= 1.0.0), libuuid1 (>= 2.16)
+Filename: saluzieos/libaprutil1_1.4.1-3_i386.deb
+Size: 91688
+MD5sum: 5da455acc908339ce46ef7091fcc1d3d
+SHA1: 1b86c879fea0222148c26ba84c83bd9d79db4bfc
+SHA256: 3cfff5e9b8f26b35b47646b3de30ef8aae985f852495028f89fd503197050b8b
+SHA512: 6bedd6afcc68393f70e3010b188aa0ac15f7eae25177ad081e6e8533820c34202f8195ea4fc4cdd5919eec93a7e85896bd6331854b0aa10f6ec068d72013af15
+Description: Apache Portable Runtime Utility Library
+ APR is Apache's Portable Runtime Library, designed to be a support library
+ that provides a predictable and consistent interface to underlying
+ platform-specific implementations.
+ .
+ APR Util is a utilities library implemented on top of apr, providing database
+ access, xml parsing, and other useful functionality.
+Homepage: http://apr.apache.org/
+
+Package: libltdl7
+Priority: optional
+Section: libs
+Installed-Size: 392
+Maintainer: Kurt Roeckx <kurt@roeckx.be>
+Architecture: i386
+Source: libtool
+Version: 2.4.2-1.1
+Depends: libc6 (>= 2.3)
+Pre-Depends: multiarch-support
+Filename: saluzieos/libltdl7_2.4.2-1.1_i386.deb
+Size: 352146
+MD5sum: 7d961b1cae1752a80ef71bed1264a73d
+SHA1: 9944a479261e63c22f01d7bd47f7d1f7237c2343
+SHA256: 1f83d5dea435592198e9f37dedf8b1baccd953656ae62f562e49a65a392a3bd5
+SHA512: 802ea938df6d49817a54b0bcc537d30f1506e6f3f5398f069ec1fac68d0c025eed8feb14cf0cb215c47091fa2125d92386e0703f2ccc218a50eda926a16397a2
+Description: A system independent dlopen wrapper for GNU libtool
+ This package contains the run-time libltdl library.
+ .
+ A small library that aims at hiding the various difficulties of
+ dlopening libraries from programmers.  It is a system independent
+ dlopen wrapper for GNU libtool.
+ .
+ It supports the following dlopen interfaces:
+   * dlopen (Solaris, Linux and various BSD flavors)
+   * shl_load (HP-UX)
+   * LoadLibrary (Win16 and Win32)
+   * load_add_on (BeOS)
+   * GNU DLD (emulates dynamic linking for static libraries)
+   * libtool's dlpreopen
+Multi-Arch: same
+Homepage: http://www.gnu.org/software/libtool/
+
+Package: libaprutil1-dbd-sqlite3
+Priority: optional
+Section: libs
+Installed-Size: 62
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: i386
+Source: apr-util
+Version: 1.4.1-3
+Depends: libaprutil1 (= 1.4.1-3), libc6 (>= 2.3.6-6~), libsqlite3-0 (>= 3.5.9)
+Filename: saluzieos/libaprutil1-dbd-sqlite3_1.4.1-3_i386.deb
+Size: 18874
+MD5sum: 1fe79171978b778bbeffc9efc6e19bae
+SHA1: 5250d87cd306e1749aa4499cbbd37c71d6342bc0
+SHA256: 2fc875a392b106e29a22e2c7b5d7ea004ec95d0b67cd34d22b7c6d5726cf6b20
+SHA512: 21640febcfcc171ae200e3f2979f12ed85e9ebd187380970c35d7cb29ec3a33bd4fa21ad8f55a64b837ce664e62bae9682b1a7840015ecf4fe1e5cbd630503a1
+Description: Apache Portable Runtime Utility Library - SQLite3 Driver
+ APR is Apache's Portable Runtime Library, designed to be a support library
+ that provides a predictable and consistent interface to underlying
+ platform-specific implementations.
+ .
+ APR Util is a utilities library implemented on top of apr, providing database
+ access, xml parsing, and other useful functionality.
+ .
+ This package contains the SQLite3 database driver.
+Homepage: http://apr.apache.org/
+
+Package: php5-cli
+Priority: optional
+Section: php
+Installed-Size: 7908
+Maintainer: Debian PHP Maintainers <pkg-php-maint@lists.alioth.debian.org>
+Architecture: i386
+Source: php5
+Version: 5.4.4-14+deb7u9
+Provides: phpapi-20100525+lfs
+Depends: libbz2-1.0, libc6 (>= 2.11), libcomerr2 (>= 1.01), libdb5.1, libgssapi-krb5-2 (>= 1.6.dfsg.2), libk5crypto3 (>= 1.6.dfsg.2), libkrb5-3 (>= 1.6.dfsg.2), libonig2 (>= 5.2.0), libpcre3 (>= 8.10), libqdbm14 (>= 1.8.74), libssl1.0.0 (>= 1.0.0), libxml2 (>= 2.8.0), zlib1g (>= 1:1.1.4), mime-support, php5-common (= 5.4.4-14+deb7u9), libmagic1, ucf, tzdata
+Suggests: php-pear
+Filename: saluzieos/php5-cli_5.4.4-14+deb7u9_i386.deb
+Size: 2600916
+MD5sum: c80f79e520f4cbc38a7b3db5429c264c
+SHA1: 091eeed26fd919b671de946dfed43c2a18f3a46b
+SHA256: 7e3b4f1a401de8d80167a891126f9d9ce574706489ef8aa519be19ed3fcc2c3c
+SHA512: 23838cb4ef35bab88b84109f4747d2aaec3719acc8fe826e894e4f87f152fbbf7aa6b817e3988c8e7050f330cbb2ba3c57855f9aded4b63bca5bac726c012ca7
+Description: command-line interpreter for the php5 scripting language
+ This package provides the /usr/bin/php5 command interpreter, useful for
+ testing PHP scripts from a shell or performing general shell scripting tasks.
+ The following extensions are built in: bcmath bz2 calendar Core ctype date
+ dba dom ereg exif fileinfo filter ftp gettext hash iconv json libxml
+ mbstring mhash openssl pcntl pcre Phar posix Reflection session shmop
+ SimpleXML soap sockets SPL standard sysvmsg sysvsem sysvshm tokenizer wddx
+ xml xmlreader xmlwriter zip zlib.
+ .
+ PHP (recursive acronym for PHP: Hypertext Preprocessor) is a widely-used
+ open source general-purpose scripting language that is especially suited
+ for web development and can be embedded into HTML.
+Homepage: http://www.php.net/
+
+Package: expect
+Priority: optional
+Section: interpreters
+Installed-Size: 335
+Maintainer: Sergei Golovan <sgolovan@debian.org>
+Architecture: i386
+Version: 5.45-2
+Depends: libc6 (>= 2.3), tcl8.5 (>= 8.5.0)
+Filename: saluzieos/expect_5.45-2_i386.deb
+Size: 188560
+MD5sum: 84f8247ba2a82296311bdcee59658bba
+SHA1: 1a6804f9f00081cf67585ad1730cccf0270f6a90
+SHA256: a7ca3306fae19f6a1b9de7df680d0256de6a104e43bed0a6a9113208b8f5e4a9
+SHA512: ddb4b4bf3a3c1994bcc9d7263e1e308cc659c82da4046ddb120a810bffd1ab566bf12d94e6b8704e23c01b0f60d29f735fc3029164cc26b02737ecbee74097e3
+Description: Automates interactive applications
+ Expect is a tool for automating interactive applications according to a script.
+ Following the script, Expect knows what can be expected from a program and what
+ the correct response should be. Expect is also useful for testing these same
+ applications. And by adding Tk, you can also wrap interactive applications in
+ X11 GUIs. An interpreted language provides branching and high-level control
+ structures to direct the dialogue. In addition, the user can take control and
+ interact directly when desired, afterward returning control to the script.
+Homepage: http://sourceforge.net/projects/expect/
+
+Package: courier-pop
+Priority: extra
+Section: mail
+Installed-Size: 198
+Maintainer: Stefan Hornburg (Racke) <racke@linuxia.de>
+Architecture: i386
+Source: courier
+Version: 0.68.2-1
+Replaces: pop3-server
+Provides: pop3-server
+Depends: courier-authlib (>= 0.63.0), libc6 (>= 2.4), default-mta | mail-transport-agent, courier-base (>= 0.68.2), debconf
+Suggests: courier-doc, mail-reader, courier-pop-ssl
+Conflicts: pop3-server
+Filename: saluzieos/courier-pop_0.68.2-1_i386.deb
+Size: 64610
+MD5sum: e9ffddc7c37f8061f0e18739236587b0
+SHA1: 14d4edabf08731c7282c7c8f19817dbe6edc35ce
+SHA256: 841dff80c972a70308c91ee536937f5d709f8bf374b81182695860d67beb1aa8
+SHA512: d1aeae3e7a40c2cc6182be3d3aa6a665d5e644a7d079c7a573abd890ed3a7377fd2d4e38f19c1088c2cb8e069e0a4b9b03728aaa1b5d02547b50ee08aa21b118
+Description: Courier mail server - POP3 server
+ The Courier mail transfer agent (MTA) is an integrated mail/groupware
+ server based on open commodity protocols, such as ESMTP, IMAP, POP3, LDAP,
+ SSL, and HTTP. Courier provides ESMTP, IMAP, POP3, webmail, and mailing list
+ services within a single, consistent, framework.
+ .
+ This package provide the POP3 daemon for Courier. It only supports email
+ stored in the Maildir format.
+Homepage: http://www.courier-mta.org/
+
+Package: squirrelmail
+Priority: optional
+Section: web
+Installed-Size: 2709
+Maintainer: Jeroen van Wolffelaar <jeroen@wolffelaar.nl>
+Architecture: all
+Version: 2:1.4.23~svn20120406-2
+Depends: apache2 | httpd, libapache2-mod-php5 | php5 | php5-cgi, perl
+Recommends: squirrelmail-locales, squirrelmail-viewashtml, php5-mhash, ispell | aspell | aspell-bin
+Suggests: squirrelmail-decode, php5-recode, imap-server, imapproxy, php-pear, php5-ldap
+Filename: saluzieos/squirrelmail_2%3a1.4.23~svn20120406-2_all.deb
+Size: 646442
+MD5sum: c20d59e3b192e289e3cabe4010bedbf5
+SHA1: eeee50a47126209a59e39876fe0a9e5afeae4804
+SHA256: e62616a3e044979146d1d4bac9b2e1470d297a1e9732a8664c9b4475be2ffb3c
+SHA512: 0100f0666875e62f51d8dc6aca2e6d8d194ea4b4bd415979efe6a246b9d8da7a56e2049f2e67eac9ab25252e3a483ebc288f113db450f905dede30ed5ec644fb
+Description: Webmail for nuts
+ SquirrelMail is a standards-based webmail package written in PHP. It
+ includes built-in pure PHP support for the IMAP and SMTP protocols, and
+ is designed for maximum compatibility across browsers. SquirrelMail has
+ few requirements and is easy to configure and install. It runs on top of
+ any IMAP server.
+ .
+ SquirrelMail has all the functionality you would want from an email client,
+ including strong MIME support, address books and folder manipulation.
+Homepage: http://www.squirrelmail.org/
+
+Package: libonig2
+Priority: extra
+Section: libs
+Installed-Size: 372
+Maintainer: Max Kellermann <max@duempel.org>
+Architecture: i386
+Source: libonig
+Version: 5.9.1-1
+Depends: libc6 (>= 2.7-1)
+Filename: saluzieos/libonig2_5.9.1-1_i386.deb
+Size: 133930
+MD5sum: 029a803f1993b0af6e380efe2510fbc3
+SHA1: 6c6fa2043ae050a9b22789b9f09628eec6715306
+SHA256: 6a8193bc550368f7937c02c793c056d00f7b73b6811e7e04d7c80eec50bec874
+SHA512: 470cda3c595abfce652c218cb234a1ffd3125207c41b03551691427aeafad95b932cae3f84f6dad59a116e030e9555aa3f12244aec6286b9cc90885e631a88b6
+Description: Oniguruma regular expressions library
+ The characteristics of this library is that different character
+ encoding for every regular expression object can be specified.
+Homepage: http://www.geocities.jp/kosako3/oniguruma/
+
+Package: proftpd-basic
+Priority: optional
+Section: net
+Installed-Size: 3952
+Maintainer: ProFTPD Maintainance Team <pkg-proftpd-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: proftpd-dfsg
+Version: 1.3.4a-5+deb7u1
+Replaces: proftpd (<< 1.3.2)
+Provides: ftp-server, proftpd, proftpd-abi-1.3.4a
+Depends: adduser, debconf (>= 0.5.00), debianutils (>= 1.21.0), libpam-runtime (>= 0.76-13.1), netbase (>= 4.13), sed (>= 4.1.5), ucf (>= 0.30), update-inetd, libacl1 (>= 2.2.51-8), libc6 (>= 2.7), libcap2 (>= 2.10), libncurses5 (>= 5.5-5~), libpam0g (>= 0.99.7.1), libpcre3 (>= 8.10), libssl1.0.0 (>= 1.0.0), libtinfo5, libwrap0 (>= 7.6-4~), zlib1g (>= 1:1.1.4)
+Recommends: proftpd-mod-vroot
+Suggests: openbsd-inetd | inet-superserver, openssl, proftpd-doc, proftpd-mod-ldap, proftpd-mod-mysql, proftpd-mod-odbc, proftpd-mod-pgsql, proftpd-mod-sqlite
+Conflicts: ftp-server
+Breaks: proftpd (<< 1.3.2)
+Filename: saluzieos/proftpd-basic_1.3.4a-5+deb7u1_i386.deb
+Size: 2520276
+MD5sum: 1fa1bda0f7f2eff973e6584b134b26a2
+SHA1: 6920efcdab68e044f310cbc0d3a8a207e0c56f14
+SHA256: 93942d4d128495c06a2314894c354f29a3446afba130c9f6d7c3e66c5e8b4320
+SHA512: 7fa64f837d95278650af1603eea3ae48c12b17a27dba5fd756e4fa5ddcf34f0b1e0823b68bb48ec9b9006a30cc86564809cd73f43e26815d64dbf69273a3b662
+Description: Versatile, virtual-hosting FTP daemon - binaries
+ ProFTPD is a powerful modular FTP/SFTP/FTPS server. This File Transfer
+ Protocol daemon supports also hidden directories, virtual hosts, and
+ per-directory ".ftpaccess" files. It uses a single main configuration
+ file, with a syntax similar to Apache.
+ .
+ Because of the advanced design, anonymous-FTP directories can have
+ an arbitrary internal structure (bin, lib, etc, and special files are
+ not needed). Advanced features such as multiple password files and
+ upload/download ratios are also supported.
+ .
+ This package contains the daemon and all main modules used for
+ common configurations. If you need database-centric authentication
+ install the suitable proftpd-mod suggested package.
+Homepage: http://www.proftpd.org/
+
+Package: courier-imap
+Priority: extra
+Section: mail
+Installed-Size: 629
+Maintainer: Stefan Hornburg (Racke) <racke@linuxia.de>
+Architecture: i386
+Source: courier (0.68.2-1)
+Version: 4.10.0-20120615-1
+Replaces: imap-server
+Provides: imap-server
+Depends: courier-authlib (>= 0.63.0), libc6 (>= 2.7), libfam0, libgdbm3 (>= 1.8.3), default-mta | mail-transport-agent, courier-base (>= 0.68.2), debconf
+Suggests: courier-doc, imap-client, courier-imap-ssl
+Conflicts: imap-server
+Filename: saluzieos/courier-imap_4.10.0-20120615-1_i386.deb
+Size: 278170
+MD5sum: b9fe508b0e98bf3da72f8cd0d88a2062
+SHA1: 4e9b0e2ddd1ba9c83054eda2f0cfc1403b0f8431
+SHA256: da28d1c81d99f854caf983fc7861cf50b16e1d9d54ad71b2aeeb657f3a7abcdc
+SHA512: 2763252316f408015b9811dd91716326a1321480a2d6826519a999cb89db93c81c478693e101bbee5b233474ac9f4dbcae75fdb2458ef6881783004ec821aa6b
+Description: Courier mail server - IMAP server
+ The Courier mail transfer agent (MTA) is an integrated mail/groupware
+ server based on open commodity protocols, such as ESMTP, IMAP, POP3, LDAP,
+ SSL, and HTTP. Courier provides ESMTP, IMAP, POP3, webmail, and mailing list
+ services within a single, consistent, framework.
+ .
+ This package provides an IMAP server that accesses email stored in Maildirs
+ format mailboxes. This server has an extremely small footprint and provides
+ shared and virtual shared folders.
+Homepage: http://www.courier-mta.org/
+
+Package: apache2
+Priority: optional
+Section: httpd
+Installed-Size: 29
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: i386
+Version: 2.2.22-13+deb7u1
+Depends: apache2-mpm-worker (= 2.2.22-13+deb7u1) | apache2-mpm-prefork (= 2.2.22-13+deb7u1) | apache2-mpm-event (= 2.2.22-13+deb7u1) | apache2-mpm-itk (= 2.2.22-13+deb7u1), apache2.2-common (= 2.2.22-13+deb7u1)
+Filename: saluzieos/apache2_2.2.22-13+deb7u1_i386.deb
+Size: 1434
+MD5sum: 108286d11cd84928ec088099c418c96b
+SHA1: 47a68e7f78d6b80a0a6b54836bf1db0c2d41ee14
+SHA256: 589f1efb7a5ae1bc2bf58485e1140e6f4fddd72728c59d12a1d35c86183f6a26
+SHA512: e3f1d649f4df1f34613ca7a98c47198440eab30b179dee6ec321cea2193069e25578ef71952c73cf7c83b30faa66a822cbde49a8dfb02c4aa6cbab456cbbf2d5
+Description: Apache HTTP Server metapackage
+ The Apache Software Foundation's goal is to build a secure, efficient and
+ extensible HTTP server as standards-compliant open source software. The
+ result has long been the number one web server on the Internet.
+ .
+ It features support for HTTPS, virtual hosting, CGI, SSI, IPv6, easy
+ scripting and database integration, request/response filtering, many
+ flexible authentication schemes, and more.
+Homepage: http://httpd.apache.org/
+
+Package: proftpd-mod-vroot
+Priority: optional
+Section: net
+Installed-Size: 82
+Maintainer: ProFTPD Maintainance Team <pkg-proftpd-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: proftpd-mod-vroot (0.9.2-2)
+Version: 0.9.2-2+b2
+Depends: proftpd-basic (>= 1.3.4~rc2-2~), libc6 (>= 2.2), proftpd-abi-1.3.4a
+Breaks: proftpd-basic (<< 1.3.4~rc2-2~)
+Filename: saluzieos/proftpd-mod-vroot_0.9.2-2+b2_i386.deb
+Size: 17192
+MD5sum: 9be9295014f933f91988ea702022bf32
+SHA1: 195be3644fd395a1187113050e5997b1c58acf86
+SHA256: 69ca93b6b0863d4ac1ccc058ef294839ae3a71e5d9da9c29697c02f3fac25362
+SHA512: 569e25e9e4528ed22a125e6ab0c8412268b6b07110b53952e9cd139e69af692ba7e177b871d7980b37a6201aaf0cf263b2e147d912ca26c3ff98f2beba335000
+Description: ProFTPD module mod_vroot
+ The purpose of this module to is to implement a virtual chroot
+ capability that does not require root privileges.
+ The mod_vroot module provides this capability by using ProFTPD's
+ FS API. It also allows one to map a directory out of the user chroot
+ as an alias in the chroot for sharing common directories.
+Homepage: http://www.castaglia.org/proftpd/modules/mod_vroot.html
+
